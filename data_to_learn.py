@@ -1,8 +1,10 @@
+import json
+
 w = "word"
 cw = "counter-word"
 
 words = [{w : "Feather", cw : "Rock"},
-         {w : "Coal", cw : "Water"},
+         {w : "Coal", cw : "Peddle"},
          {w : "Pebble", cw : "Leaf"},
          {w : "Leaf", cw : "Rock"},
          {w : "Paper", cw : "Sword"},
@@ -59,5 +61,34 @@ words = [{w : "Feather", cw : "Rock"},
          {w : "Apocalyptic Meteor", cw : "Human Spirit"},
          {w : "Earth's Core", cw : "Nuclear Bomb"},
          {w : "Neutron Star", cw : "Neutron Star"},
-         {w : "Supermassive Black Hole", cw : "Supermassive Balck Hole"},
-         {w : "Entropy", cw : "Logic"}]
+         {w : "Supermassive Black Hole", cw : "Supermassive Black Hole"},
+         {w : "Entropy", cw : "Logic"}, # set de date de la ADȘ
+         {w : "Bottle", cw : "Sword"},
+         {w : "Laptop", cw : "Sword"},
+         {w : "Book", cw : "Sword"},
+         {w : "Sand", cw : "Flame"},
+         {w : "Purse", cw : "Sword"},
+         {w : "Beens", cw : "Rock"},
+         {w : "Clothes", cw : "Sword"},
+         {w : "Car", cw : "Flame"},
+         {w : "Human", cw : "Gun"},
+         {w : "God", cw : "Fate"},
+         {w : "Building", cw : " Earthquake"},
+         {w : "Juice", cw : "Rock"},
+         {w : "Brick" , cw : "Earthquake"},
+         {w : "Cloud", cw : "Storm"},
+         {w : "River", cw : "Pebble"},
+         {w : "Antibiotic", cw : "Bacteria"},
+         {w : "Silence", cw : "Sound"},
+         {w : "Eternity", cw : "Time"},
+         {w : "Free Will", cw : "Fate"},
+         {w : "Calm", cw : "Storm"},
+         {w : "Anti-gravity", cw : "Gravity"},
+         {w : "Flood", cw : "Sandstorm"},
+         {w : "Fire", cw : "Ice"},
+         {w : "Ignorance", cw : "Enlightenment"},
+         {w : "Matter", cw : "Antimatter"},
+         {w : "Destruction", cw : "Rebirth"},
+         {w : "Stability", cw : "Tectonic Shift"},
+         {w : "Order", cw : "Entropy"},
+         {w : "Outer Space", cw : "Earth's Core"}]
