@@ -91,4 +91,6 @@ words = [{w : "Feather", cw : "Rock"},
          {w : "Destruction", cw : "Rebirth"},
          {w : "Stability", cw : "Tectonic Shift"},
          {w : "Order", cw : "Entropy"},
-         {w : "Outer Space", cw : "Earth's Core"}]
+         {w : "Outer Space", cw : "Earth's Core"},
+         {w : "Ash", cw : "Fire"}, 
+         {w: "Chicken", "cw": "Virus"}]
