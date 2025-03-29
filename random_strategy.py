@@ -4,6 +4,7 @@ import random
 # import tensorflow as tf
 import json
 from word_choice import *
+from kmeans import *
 #from lista_cuvinte import *
 # Assuming you have the trained model and JSON data
 #model = tf.keras.models.load_model('lista_cuvinte.py')  # Load the pre-trained model
@@ -16,9 +17,9 @@ get_url = "http://172.18.4.158:8000/get-word"
 status_url = "http://172.18.4.158:8000/status"
 
 NUM_ROUNDS = 5
-
-def what_beats(word):    
-    return data[random.randint(11, 30)]['text']
+NUMAR = 0
+def what_beats(sys_word):    
+    return predict_counter_word_most_frequent(sys_word)
 
 def play_game(player_id):
     for round_id in range(1, NUM_ROUNDS+1):
@@ -28,16 +29,15 @@ def play_game(player_id):
             print(response.json())
             sys_word = response.json()['word']
             round_num = response.json()['round']
-            print(f"Round {round_id}: API word is '{sys_word}'")
-
-            choosen_word = what_beats(sys_word)
-            print(f"Chosen word: {choosen_word}")
             sleep(1)
-
-        # Get status after each round
-        status = requests.get(status_url)
-        print(f"Status after round {round_id}: {status.json()}")
-        
+        if round_id > 1:
+            status = requests.get(status_url)
+            print(f"Status after round {round_id}: {status.json()}")
+        choosen_word = what_beats(sys_word)
+        print(f"Player: {player_id}, Runda: {round_id}, Sys_word: {choosen_word}")
+        data = {"player_id": player_id, "word_id": choosen_word, "round_id": round_id}
+        response = requests.post(post_url, json = data)
+        print(response.json())        
         
 if __name__=="__main__":
-    play_game(1)
+    play_game("JEZRVRmDMj")
